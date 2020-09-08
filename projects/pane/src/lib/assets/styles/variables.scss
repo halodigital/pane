@@ -1,0 +1,61 @@
+$bgColor: #e5eaf6;
+$purpleColor: #868dbb;
+
+$resizer-color: $purpleColor;
+$resizer-opacity: 0.5;
+$resizer-thickness: 3px;
+$resizer-padding: 15px;
+
+%resizer {
+
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: $resizer-opacity;
+    }
+
+    &:active:hover {
+        z-index: 10;
+
+        &::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+}
+
+%resizer-horizontal {
+
+    @extend %resizer;
+
+    width: $resizer-thickness + $resizer-padding;
+    height: 100%;
+    top: 0;
+
+    &:hover, &:active:hover::before {
+        cursor: ew-resize;
+    }
+
+}
+
+%resizer-vertical {
+
+    @extend %resizer;
+
+    width: 100%;
+    height: $resizer-thickness + $resizer-padding;
+    left: 0;
+
+    &:hover, &:active:hover::before {
+        cursor: ns-resize;
+    }
+
+}

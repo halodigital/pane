@@ -1,0 +1,21 @@
+{
+    "name": "@halodigital/pane",
+    "version": "1.0.6",
+    "peerDependencies": {
+        "@angular/common": "^10.0.14",
+        "@angular/core": "^10.0.14",
+        "@halodigital/loading-animation": "^1.0.0"
+    },
+    "dependencies": {
+        "tslib": "^2.0.0"
+    },
+    "description": "Halo-Digital Pane",
+    "keywords": [
+        "Halo-Digital",
+        "halo-digital",
+        "halodigital",
+        "pane"
+    ],
+    "author": "Halo-Digital",
+    "license": "MIT"
+}

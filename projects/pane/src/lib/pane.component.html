@@ -1,0 +1,35 @@
+<button
+    *ngIf="showCloseButton"
+    type="button"
+    class="halo-pane-close-button"
+    (click)="close()">
+
+    <i class="icon-close"></i>
+
+</button>
+
+<div #content class="halo-pane-content">
+
+    <ng-content></ng-content>
+
+    <div *ngIf="isLoading" class="halo-pane-loading">
+
+        <halo-loading></halo-loading>
+
+    </div>
+
+</div>
+
+<div
+    *ngIf="horizontalResize"
+    [class]="'halo-pane-resizer-horizontal-' + horizontalResize"
+    (mousedown)="resize('horizontal')"
+    (dblclick)="toggleMinMaxSize('horizontal')">
+</div>
+
+<div
+    *ngIf="verticalResize"
+    [class]="'halo-pane-resizer-vertical-' + verticalResize"
+    (mousedown)="resize('vertical')"
+    (dblclick)="toggleMinMaxSize('vertical')">
+</div>

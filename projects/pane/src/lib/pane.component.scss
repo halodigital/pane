@@ -1,0 +1,99 @@
+@import 'assets/styles/icons.scss';
+@import 'assets/styles/variables.scss';
+
+
+:host::ng-deep {
+
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+
+    .halo-pane-close-button {
+        width: 20px;
+        height: 20px;
+        color: $purpleColor;
+        background-color: transparent;
+        border: none;
+        top: 5px;
+        right: 5px;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+
+        i {
+            font-size: 10px;
+        }
+    }
+
+    .halo-pane-content {
+        width: 100%;
+        height: 100%;
+        overflow: overlay;
+        position: relative;
+
+        .halo-pane-loading {
+            width: 100%;
+            height: 100%;
+            background-color: rgba($bgColor, 0.7);
+            left: 0;
+            top: 0;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            halo-loading {
+                width: 100px;
+            }
+        }
+    }
+
+    .halo-pane-resizer-horizontal-right,
+    .halo-pane-resizer-horizontal-right-top,
+    .halo-pane-resizer-horizontal-right-bottom {
+        @extend %resizer-horizontal;
+        right: -1px;
+        border-right: $resizer-thickness solid $resizer-color;
+    }
+
+    .halo-pane-resizer-horizontal-left,
+    .halo-pane-resizer-horizontal-left-top,
+    .halo-pane-resizer-horizontal-left-bottom {
+        @extend %resizer-horizontal;
+        left: -1px;
+        border-left: $resizer-thickness solid $resizer-color;
+    }
+
+    .halo-pane-resizer-vertical-top,
+    .halo-pane-resizer-vertical-left-top,
+    .halo-pane-resizer-vertical-right-top {
+        @extend %resizer-vertical;
+        top: -1px;
+        border-top: $resizer-thickness solid $resizer-color;
+    }
+
+    .halo-pane-resizer-vertical-bottom,
+    .halo-pane-resizer-vertical-left-bottom,
+    .halo-pane-resizer-vertical-right-bottom {
+        @extend %resizer-vertical;
+        bottom: -1px;
+        border-bottom: $resizer-thickness solid $resizer-color;
+    }
+
+}
+
+:host-context(halo-pane) {
+
+    &.halo-pane-horizontal-closed {
+        width: 0 !important;
+        min-width: 0 !important;
+        overflow: hidden;
+    }
+
+    &.halo-pane-vertical-closed {
+        height: 0 !important;
+        min-height: 0 !important;
+        overflow: hidden;
+    }
+
+}
