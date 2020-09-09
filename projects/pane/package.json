@@ -1,10 +1,10 @@
 {
     "name": "@halodigital/pane",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "peerDependencies": {
         "@angular/common": "^10.0.14",
         "@angular/core": "^10.0.14",
-        "@halodigital/loading-animation": "^1.0.0"
+        "@halodigital/loading-animation": "^1.0.1"
     },
     "dependencies": {
         "tslib": "^2.0.0"
