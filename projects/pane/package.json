@@ -1,6 +1,6 @@
 {
     "name": "@halodigital/pane",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "peerDependencies": {
         "@angular/common": "^10.0.14",
         "@angular/core": "^10.0.14",
