@@ -6,5 +6,8 @@
         "umdModuleIds": {
             "@halodigital/loading-animation": "@halodigital/loading-animation"
         }
-    }
+    },
+    "assets": [
+        "assets"
+    ]
 }
